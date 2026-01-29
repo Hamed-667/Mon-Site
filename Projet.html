@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Gourmet - Restaurant</title>
+    <style>
+      
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #FF9800; /* Fond orange */
+            color: #000; /* Texte noir */
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        
+        header {
+            background-color: #000;
+            color: #FF9800;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        
+        nav {
+            background-color: #000;
+            padding: 10px 0;
+        }
+        
+        nav ul {
+            list-style: none;
+            text-align: center;
+        }
+        
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: #FF9800;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #FFC107;
+        }
+        
+        
+        section {
+            padding: 40px 0;
+        }
+        
+        section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #000;
+            font-size: 2rem;
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        
+        .about {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        
+        .menu-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .menu-category {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #FF9800;
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        
+        .menu-category h3 {
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        
+        .menu-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #FF9800;
+        }
+        
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        
+        .menu-item h4 {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .menu-item p {
+            margin-top: 5px;
+            font-style: italic;
+        }
+        
+    
+        .contact-info {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #FF9800;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #000;
+            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .contact-form button {
+            background-color: #000;
+            color: #FF9800;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .contact-form button:hover {
+            background-color: #333;
+        }
+        
+    
+        footer {
+            background-color: #000;
+            color: #FF9800;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        
+        .social-links {
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 24px;
+    color: var(--secondary-text);
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+    transform: translateY(-5px);
+}
+        
+        
+        @media (max-width: 768px) {
+            .menu-category {
+                width: 100%;
+            }
+            
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Le Gourmet</h1>
+            <p>Cuisine traditionnelle et savoureuse</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section id="accueil">
+        <div class="container">
+            <h2>Bienvenue chez Le Gourmet</h2>
+            <div class="about">
+                <p>Découvrez une expérience culinaire exceptionnelle dans notre restaurant situé au cœur de la ville De Bobo-Dioulasso. Nos chefs talentueux préparent des plats délicieux qui raviront vos papilles.</p>
+                <p>Horaires d'ouverture :</p>
+                <ul>
+                    <li>Lundi - Vendredi : 11h30 - 14h30 | 18h30 - 22h30</li>
+                    <li>Samedi - Dimanche : 11h30 - 23h00</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section id="menu">
+        <div class="container">
+            <h2>Notre Menu</h2>
+            <div class="menu-items">
+                <div class="menu-category">
+                    <h3>Entrées</h3>
+                    <div class="menu-item">
+                        <h4>Salade <span>2500 f</span></h4>
+                        <p> parmesan, croûtons, sauce César maison</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4>Soupe à l'oignon <span>2500 f</span></h4>
+                        <p>Oignons caramélisés, bouillon de bœuf, croûtons, gruyère fondu</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4>Viande de  bœuf <span> À partir de 4500 f</span></h4>
+                        <p>Fines tranches de bœuf, parmesan, roquette, huile d'olive</p>
+                    </div>
+                </div>
+                
+                <div class="menu-category">
+                    <h3>Plats Principaux</h3>
+                    <div class="menu-item">
+                        <h4>Viande de canard <span>À partir de 3500 f</span></h4>
+                        <p> sauce aux fruits rouges, purée de pommes de terre</p>
+                    </div>
+                   
+                    
+            
+                
+                <div class="menu-category">
+                    <h3>Desserts</h3>
+                    <div class="menu-item">
+                        <h4>Tarte au citron meringuée <span>1500 f</span></h4>
+                        <p>Crème de citron, meringue italienne, pâte sablée</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4>Crème brûlée <span>1500 f</span></h4>
+                        <p>Crème à la vanille, caramel croustillant</p>
+                    </div>
+                    <div class="menu-item">
+                        <h4>Fondant au chocolat <span>900 f</span></h4>
+                        <p>Cœur coulant, glace vanille, coulis de framboise</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about">
+        <div class="container">
+            <h2>À Propos</h2>
+            <div class="about">
+                <p>Notre équipe est composée de professionnels passionnés qui s'efforcent de vous offrir une expérience culinaire inoubliable à chaque visite.</p>
+                <p>Nous privilégions les produits locaux et travaillons avec des producteurs de la région pour vous garantir des plats de qualité.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <h3>Informations</h3>
+                <p>Adresse : Non loin du Plateau d'accart ville .</p>
+                <p>Téléphone : 54576629</p>
+                <p>Email : famed5513@gmail.com</p>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Réservation</h3>
+                <form>
+                    <div>
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div>
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div>
+                        <label for="phone">Téléphone :</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div>
+                        <label for="date">Date :</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div>
+                        <label for="time">Heure :</label>
+                        <input type="time" id="time" required>
+                    </div>
+                    <div>
+                        <label for="guests">Nombre de personnes :</label>
+                        <input type="number" id="guests" min="1" max="10" required>
+                    </div>
+                    <div>
+                        <label for="message">Message :</label>
+                        <textarea id="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit">Réserver une table</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/Hamed-667"><i class="fab fa-github"></i></a>
+            <a href="https://accounts.snapchat.com/v2/snapcode"><i class="fa-brands fa-snapchat"></i></a>
+            <a href="https://x.com/Hamedbachire?t=wdmjI1AragHSLUTkInt4vw&s=09"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/le_mage_noire/#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@zelef.lp13_?is_from_webapp=1&sender_device=pc"><i class="fa-brands fa-tiktok"></i></a>
+
+        </div>
+        <p>&copy; 2025 - Site Web créé par [Faye_Hamed_Bachirou]</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

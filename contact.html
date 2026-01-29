@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio | Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .contact-section {
+            padding: 120px 5% 80px;
+        }
+        
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-info h3 {
+            font-size: 24px;
+            margin-bottom: 25px;
+            color: var(--primary-color);
+        }
+        
+        .contact-info p {
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--section-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: var(--primary-color);
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-detail:hover .contact-icon {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            transform: translateY(-5px);
+        }
+        
+        .contact-text {
+            font-size: 16px;
+        }
+        
+        .contact-text span {
+            display: block;
+            color: var(--secondary-text);
+            font-size: 14px;
+            margin-top: 3px;
+        }
+        
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: var(--section-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            color: var(--text-color);
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus, 
+        .form-group textarea:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 10px rgba(255, 107, 0, 0.1);
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        button.btn {
+            cursor: pointer;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+        }
+        
+        .form-group {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s forwards;
+        }
+        
+        .form-group:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .form-group:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        
+        .form-group:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Mon <span>Portfolio</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <h2>Me contacter</h2>
+            <p>Vous avez une question ou souhaitez collaborer ? N'hésitez pas à me contacter.</p>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Mes informations</h3>
+                    <p>Je suis disponible pour des projets freelance, des stages ou des opportunités d'emploi. Contactez-moi par email ou remplissez le formulaire.</p>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            famed5513@gmail.com
+                            <span>Disponible tous les jours</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            +226 54576625
+                            <span>Du lundi au vendredi, 9h-18h</span>
+                        </div>
+                    </div>
+                    <script src="script.js"></script>
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            Bobo-Dioulasso, Burkina Faso
+                            <span>Disponible pour des projets à distance</span>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="contact-form">
+                    <form action="#" method="POST">
+                        <h1><mark>Entrez les informations</mark> </h1>
+                          <strong>
+                          <label>Nom:</label><input placeholder="Nom" maxlength="8" type="text"  required size="50"><br>
+                          <br>
+                          <label>Prenom:</label><input placeholder="Prenom" maxlength="50" type="text"  required size="50"><br>
+                          <br>
+                          <label>Email:</label><input placeholder="Email" required  size="50" ><br>
+                          <br>
+                          <label>Age:</label><input placeholder="Age" type="number" min="0"  required ><br>
+                          <br>
+                        
+                        </strong>
+                          
+                          <b>Sexe :</b>
+                        
+                       <strong><br>
+                          <ol>
+                            <li><input type="radio" id="M" name="gender" >Maxulin</li>
+                            <li><input type="radio" id="F" name="gender">Feminin</li>
+                          </ol>
+                        </strong>
+                        </form>
+                        <input type="submit"><br>
+                        <br>
+                        <strong>Qu'elle est votre avis sur mon site web ?</strong>  <br>
+                       <textarea rows="16" cols="45"></textarea>
+                       <br>
+                       <footer>
+                        <div class="social-links">
+                            <a href="https://github.com/Hamed-667"><i class="fab fa-github"></i></a>
+                            <a href="https://accounts.snapchat.com/v2/snapcode"><i class="fa-brands fa-snapchat"></i></a>
+                            <a href="https://x.com/Hamedbachire?t=wdmjI1AragHSLUTkInt4vw&s=09"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/le_mage_noire/#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@zelef.lp13_?is_from_webapp=1&sender_device=pc"><i class="fa-brands fa-tiktok"></i></a>
+                
+                        </div>
+                        <p>&copy; 2025 - Portfolio créé par [Faye_Hamed_Bachirou]</p>
+                    </footer>
+                  
